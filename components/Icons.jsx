@@ -1,0 +1,11 @@
+const base = { viewBox: "0 0 16 16", fill: "none", stroke: "currentColor", strokeWidth: "1.5", strokeLinecap: "round", strokeLinejoin: "round", "aria-hidden": true };
+export const ArrowUpRight = (p) => (<svg {...base} {...p}><path d="M4.5 11.5l7-7M5.5 4.5h6v6" /></svg>);
+export const ArrowRight = (p) => (<svg {...base} {...p}><path d="M2.5 8h11M9 3.5L13.5 8 9 12.5" /></svg>);
+export const ArrowLeft = (p) => (<svg {...base} {...p}><path d="M13.5 8h-11M7 3.5L2.5 8 7 12.5" /></svg>);
+export const DownloadIcon = (p) => (<svg {...base} {...p}><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10" /></svg>);
+export const CloseIcon = (p) => (<svg {...base} {...p}><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" /></svg>);
+export const SearchIcon = (p) => (<svg {...base} {...p}><circle cx="7" cy="7" r="4.5" /><path d="M10.5 10.5L14 14" /></svg>);
+export const LinkIcon = (p) => (<svg {...base} {...p}><path d="M6.5 9.5a3 3 0 004.2 0l2-2a3 3 0 00-4.2-4.2l-.8.8M9.5 6.5a3 3 0 00-4.2 0l-2 2a3 3 0 004.2 4.2l.8-.8" /></svg>);
+export const WhatsAppIcon = (p) => (<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" {...p}><path d="M8 1.5a6.4 6.4 0 00-5.5 9.7L1.6 14.4l3.3-.9A6.4 6.4 0 108 1.5zm0 1.2a5.2 5.2 0 11-2.7 9.7l-.2-.1-1.9.5.5-1.9-.1-.2A5.2 5.2 0 018 2.7zm-2 2.4c-.1 0-.3 0-.5.2-.2.2-.7.7-.7 1.6s.7 1.9.8 2c.1.1 1.4 2.2 3.4 3 1.7.7 2 .5 2.4.5.4 0 1.2-.5 1.3-1 .2-.5.2-.9.1-1l-.5-.3-1.2-.6c-.2-.1-.4-.1-.5.1l-.6.7c-.1.2-.2.2-.4.1-.2-.1-.8-.3-1.5-1-.6-.5-.9-1.1-1-1.3-.1-.2 0-.3.1-.4l.3-.3.2-.3v-.3l-.6-1.4c-.1-.4-.3-.4-.4-.4z" /></svg>);
+export const XIcon = (p) => (<svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" {...p}><path d="M9.5 6.9L14.2 1.5h-1.1L9 6.2 5.7 1.5H2l4.9 7.1L2 14.5h1.1l4.3-5L11 14.5h3.7L9.5 6.9zM7.9 8.7l-.5-.7L3.5 2.4h1.7l3.2 4.6.5.7 4.1 5.9h-1.7L7.9 8.7z" /></svg>);
+export const CheckIcon = (p) => (<svg {...base} {...p}><path d="M3 8.5l3.2 3.2L13 4.8" /></svg>);

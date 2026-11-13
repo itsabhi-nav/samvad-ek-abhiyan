@@ -1,0 +1,19 @@
+{
+  "name": "samvad-ek-abhiyan",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "framer-motion": "^11.18.2",
+    "lenis": "^1.1.20",
+    "next": "^15.1.0",
+    "page-flip": "^2.0.7",
+    "pdfjs-dist": "^3.11.174",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
