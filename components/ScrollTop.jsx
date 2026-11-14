@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-// Back-to-top button, bottom right, on every page. A plain rounded square: no ring, no circle.
+// Back-to-top button, bottom right, on every page.
 export default function ScrollTop({ label }) {
   const [show, setShow] = useState(false);
   useEffect(() => {

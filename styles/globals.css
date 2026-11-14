@@ -730,6 +730,8 @@ main, .site-footer { transition: opacity 220ms var(--ease-out); }
 .nudge-text strong { font-family: var(--font-display); font-weight: 400; font-size: var(--text-lg); line-height: 1.2; }
 .lang-hi .nudge-text strong { font-weight: 500; }
 .nudge-text span { color: var(--text-2); font-size: var(--text-sm); }
+.nudge .btn { border-radius: 999px; background: linear-gradient(135deg, var(--crimson-hi), var(--crimson)); box-shadow: inset 0 1px 0 color-mix(in oklab, white 22%, transparent), 0 4px 12px color-mix(in oklab, var(--crimson) 28%, transparent); font-weight: 600; transition: background-color var(--dur-short) var(--ease-out), box-shadow var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out); }
+.nudge .btn:hover { background: linear-gradient(135deg, color-mix(in oklab, var(--crimson-hi) 85%, white), var(--crimson-hi)); box-shadow: inset 0 1px 0 color-mix(in oklab, white 30%, transparent), 0 6px 16px color-mix(in oklab, var(--crimson) 36%, transparent); transform: translateY(-1px); }
 .nudge-x { position: absolute; top: var(--space-2xs); right: var(--space-2xs); width: 28px; height: 28px; border: 0; border-radius: 50%; background: transparent; color: var(--text-muted); cursor: pointer; display: grid; place-items: center; }
 .nudge-x:hover { color: var(--text); background: color-mix(in oklab, var(--text) 10%, transparent); }
 .nudge-x svg { width: 12px; height: 12px; }
@@ -975,7 +977,7 @@ main, .site-footer { transition: opacity 220ms var(--ease-out); }
 @keyframes loader-breathe { 50% { transform: scale(0.94); opacity: 0.82; } }
 
 /* ---------- back to top ---------- */
-.to-top { position: fixed; right: var(--space-lg); bottom: var(--space-lg); z-index: var(--z-sticky); width: 44px; height: 44px; padding: 0; border: 0; border-radius: var(--radius); display: grid; place-items: center; cursor: pointer; color: var(--text); background: color-mix(in oklab, var(--ink) 92%, transparent); box-shadow: var(--shadow-lift); transition: background-color var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out); }
+.to-top { position: fixed; right: var(--space-lg); bottom: var(--space-lg); z-index: var(--z-sticky); width: 44px; height: 44px; padding: 0; border: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer; color: var(--text); background: color-mix(in oklab, var(--ink) 92%, transparent); box-shadow: var(--shadow-lift); transition: background-color var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out); }
 .to-top svg { width: 18px; height: 18px; }
 .to-top:hover { background: var(--crimson); }
 .to-top:active { transform: scale(0.94); }
@@ -1057,11 +1059,11 @@ main, .site-footer { transition: opacity 220ms var(--ease-out); }
   .pblock .pfirst { font-size: var(--text-lg); }
   .pblock li { grid-template-columns: 36px minmax(0, 1fr); gap: var(--space-sm); }
   .pquote { padding: var(--space-md); }
-  .to-top { width: 40px; height: 40px; right: var(--space-md); bottom: var(--space-md); }
-  /* the reminder card: one slim line */
-  .nudge { left: var(--space-sm); right: calc(var(--space-md) + 40px + var(--space-xs)); bottom: var(--space-md); padding: var(--space-xs) var(--space-xl) var(--space-xs) var(--space-sm); gap: var(--space-sm); border-left-width: 2px; border-radius: var(--radius-sm); }
-  .nudge-text strong { font-size: var(--text-sm); line-height: 1.2; font-family: var(--font-body); font-weight: 500; }
-  .nudge .btn { min-height: 32px; padding: 0 var(--space-sm); font-size: var(--text-xs); }
+  .to-top { width: 44px; height: 44px; right: var(--space-md); bottom: calc(var(--space-md) + env(safe-area-inset-bottom) + 76px); }
+  .nudge { left: var(--space-sm); right: var(--space-sm); bottom: calc(var(--space-md) + env(safe-area-inset-bottom)); max-width: none; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-md); padding: var(--space-md) 40px var(--space-md) var(--space-md); border-left-width: 2px; border-radius: var(--radius); }
+  .nudge-text { min-width: 0; }
+  .nudge-text strong { font-size: clamp(1.05rem, 4.8vw, 1.2rem); line-height: 1.25; font-family: var(--font-display); font-weight: 400; letter-spacing: -0.02em; }
+  .nudge .btn { width: auto; min-height: 40px; padding: 0 var(--space-md); font-size: var(--text-sm); white-space: nowrap; }
   .nudge-x { top: 50%; right: var(--space-2xs); transform: translateY(-50%); }
 }
 
