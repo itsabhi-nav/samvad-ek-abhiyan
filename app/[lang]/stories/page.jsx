@@ -1,4 +1,5 @@
 import { getContent } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 import { categories, sortedStories } from "@/lib/stories";
 import Words from "@/components/Words";
 import StoriesBrowser from "@/components/StoriesBrowser";
@@ -6,7 +7,8 @@ import CtaBand from "@/components/CtaBand";
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
-  return { title: getContent(lang).nav[0].label };
+  const t = getContent(lang);
+  return pageMetadata({ lang, title: t.storiesPage.title, description: t.storiesPage.sub, path: "/stories", image: "/images/stock/voters.jpg" });
 }
 
 export default async function Stories({ params }) {

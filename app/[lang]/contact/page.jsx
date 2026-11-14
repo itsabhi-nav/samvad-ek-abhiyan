@@ -1,11 +1,13 @@
 import { getContent, site } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 import Reveal from "@/components/Reveal";
 import Words from "@/components/Words";
 import SubscribeForm from "@/components/SubscribeForm";
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
-  return { title: getContent(lang).nav[3].label };
+  const t = getContent(lang);
+  return pageMetadata({ lang, title: t.nav[3].label, description: t.contact.sub, path: "/contact", image: "/images/stock/night-road.jpg" });
 }
 
 export default async function Contact({ params }) {

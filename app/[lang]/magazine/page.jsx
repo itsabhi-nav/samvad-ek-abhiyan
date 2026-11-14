@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getContent, issueMeta, archiveYears } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 import Words from "@/components/Words";
 import Reveal from "@/components/Reveal";
 import Tilt from "@/components/Tilt";
@@ -10,7 +11,8 @@ import { ArrowUpRight } from "@/components/Icons";
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
-  return { title: getContent(lang).nav[1].label };
+  const t = getContent(lang);
+  return pageMetadata({ lang, title: t.nav[1].label, description: t.magazinePage.sub, path: "/magazine", image: t.issues[0].cover });
 }
 
 export default async function Magazine({ params }) {

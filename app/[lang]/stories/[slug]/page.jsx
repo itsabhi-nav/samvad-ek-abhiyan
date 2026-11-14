@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LANGS, getContent } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 import { formatDate, getCategory, getStory, sortedStories, stories } from "@/lib/stories";
 import { getAuthor } from "@/lib/authors";
 import StoryCard from "@/components/StoryCard";
@@ -19,7 +20,7 @@ export async function generateMetadata({ params }) {
   const { lang, slug } = await params;
   const s = getStory(slug);
   if (!s) return {};
-  return { title: s.title[lang], description: s.excerpt[lang], openGraph: { images: [s.image] } };
+  return pageMetadata({ lang, title: s.title[lang], description: s.excerpt[lang], path: `/stories/${slug}`, image: s.image, type: "article" });
 }
 
 export default async function Story({ params }) {

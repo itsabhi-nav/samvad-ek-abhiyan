@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LANGS, getContent } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 import { people, getPerson } from "@/lib/people";
 import PersonBody from "@/components/PersonBody";
 import CtaBand from "@/components/CtaBand";
@@ -13,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { lang, slug } = await params;
   const p = getPerson(slug);
-  return p ? { title: `${p.name[lang]}, ${p.role[lang]}`, description: p.short[lang], openGraph: { images: [p.photo] } } : {};
+  return p ? pageMetadata({ lang, title: `${p.name[lang]}, ${p.role[lang]}`, description: p.short[lang], path: `/about/${slug}`, image: p.photo }) : {};
 }
 
 export default async function Person({ params }) {

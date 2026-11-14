@@ -1,4 +1,5 @@
 import { getContent } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 import Words from "@/components/Words";
 import Reveal from "@/components/Reveal";
 import CampaignRail from "@/components/CampaignRail";
@@ -26,7 +27,8 @@ const journeyImages = {
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
-  return { title: getContent(lang).nav[2].label };
+  const t = getContent(lang);
+  return pageMetadata({ lang, title: t.nav[2].label, description: t.about.sub, path: "/about", image: "/images/stock/parliament.jpg" });
 }
 
 export default async function About({ params }) {

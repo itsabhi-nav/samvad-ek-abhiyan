@@ -1,10 +1,12 @@
 import { getContent } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 import Words from "@/components/Words";
 import credits from "@/public/images/stock/credits.json";
 
 export async function generateMetadata({ params }) {
   const { lang } = await params;
-  return { title: getContent(lang).ui2.photoCredits };
+  const t = getContent(lang);
+  return pageMetadata({ lang, title: t.ui2.photoCredits, path: "/credits" });
 }
 
 export default async function Credits({ params }) {

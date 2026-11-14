@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import { Geist, Fraunces, Noto_Serif_Devanagari, Noto_Sans_Devanagari } from "next/font/google";
 import "../../styles/globals.css";
-import { LANGS, getContent, site } from "@/lib/content";
+import { LANGS, getContent } from "@/lib/content";
+import { getSiteUrl, pageMetadata } from "@/lib/seo";
 import { sortedStories, getCategory } from "@/lib/stories";
 import Providers from "@/components/Providers";
 import SmoothScroll from "@/components/SmoothScroll";
@@ -20,12 +21,16 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { lang } = await params;
   const t = getContent(lang);
+  const title = t.meta.title;
+  const metadata = pageMetadata({
+    lang,
+    image: "/images/og-samvad.jpg",
+    imageAlt: lang === "hi" ? "संवाद – एक अभियान" : "Samvad – Ek Abhiyaan",
+  });
   return {
-    metadataBase: new URL(site.url),
-    title: { default: t.meta.title, template: `%s | ${t.meta.title}` },
-    description: t.meta.description,
-    alternates: { languages: { hi: "/hi", en: "/en" } },
-    openGraph: { title: t.meta.title, description: t.meta.description, locale: lang === "hi" ? "hi_IN" : "en_IN", type: "website", images: ["/images/stock/dusk-gate.jpg"] },
+    metadataBase: getSiteUrl(),
+    title: { default: title, template: `%s | ${title}` },
+    ...metadata,
     icons: { icon: "/images/logo.png" },
   };
 }

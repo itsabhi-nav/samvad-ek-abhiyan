@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LANGS, content, getContent, issueMeta, issuePreviews } from "@/lib/content";
+import { pageMetadata } from "@/lib/seo";
 import Tilt from "@/components/Tilt";
 import IssueReader from "@/components/IssueReader";
 import PagePreviews from "@/components/PagePreviews";
@@ -13,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { lang, id } = await params;
   const is = getContent(lang).issues.find((i) => i.id === id);
-  return is ? { title: `${is.title} (${is.period})`, openGraph: { images: [is.cover] } } : {};
+  return is ? pageMetadata({ lang, title: `${is.title} (${is.period})`, description: is.text, path: `/magazine/${id}`, image: is.cover }) : {};
 }
 
 export default async function Issue({ params }) {
