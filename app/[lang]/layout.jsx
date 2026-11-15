@@ -24,7 +24,6 @@ export async function generateMetadata({ params }) {
   const title = t.meta.title;
   const metadata = pageMetadata({
     lang,
-    image: "/images/og-samvad-wide.jpg",
     imageAlt: lang === "hi" ? "संवाद – एक अभियान" : "Samvad – Ek Abhiyaan",
   });
   return {
