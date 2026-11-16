@@ -11,7 +11,7 @@ export default function Footer({ lang, t }) {
         <div className="footer-top">
           <div className="footer-brand">
             <Link href={base} className="brand" aria-label={t.brand.name}>
-              <img className="brand-logo" src="/images/logo.png" alt="" width="66" height="44" />
+              <img className="brand-logo" src="/images/logo.png" alt="" width="88" height="64" />
               <span className="brand-text"><b>{t.brand.name}</b><span>{t.brand.tag}</span></span>
             </Link>
             <p className="footer-tag">{t.footer.tag}</p>

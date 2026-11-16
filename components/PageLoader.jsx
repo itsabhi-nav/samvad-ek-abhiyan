@@ -70,7 +70,7 @@ export default function PageLoader({ label = "Loading" }) {
               <circle className="loader-arc loader-arc--a" cx="80" cy="80" r="70" />
               <circle className="loader-arc loader-arc--b" cx="80" cy="80" r="70" />
             </svg>
-            <img src="/images/logo.png" alt="" width="96" height="64" />
+            <img src="/images/logo.png" alt="" width="88" height="64" />
           </div>
           <span className="visually-hidden">{label}</span>
         </motion.div>
