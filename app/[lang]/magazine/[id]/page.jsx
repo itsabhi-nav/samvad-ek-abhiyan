@@ -28,7 +28,6 @@ export default async function Issue({ params }) {
   const facts = [
     { l: `${t.ui.volume} / ${t.ui.issue}`, v: `${is.volume} / ${is.number}` },
     { l: t.ui.pages, v: String(is.pages) },
-    { l: t.ui.price, v: is.price },
     { l: "", v: t.ui.hindiTag },
   ];
   return (
