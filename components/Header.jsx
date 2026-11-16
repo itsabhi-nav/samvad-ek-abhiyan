@@ -62,10 +62,7 @@ export default function Header({ lang, t }) {
     <header className="site-header" data-top={top} data-menu={menu}>
       <div className="container header-inner">
         <Link href={base} className="brand" aria-label={`${t.brand.name} ${t.brand.tag}`}>
-          <picture className="brand-pic">
-            <source media="(max-width: 40rem)" srcSet="/images/logo-mark.png" />
-            <img className="brand-logo" src="/images/logo.png" alt="" width="90" height="60" />
-          </picture>
+          <img className="brand-logo" src="/images/logo.png" alt="" width="90" height="60" />
         </Link>
 
         <nav className="nav" aria-label="Primary">

@@ -113,7 +113,6 @@ kbd { font: 400 0.72rem/1 var(--font-mono); padding: var(--space-2xs) var(--spac
 .site-header { position: fixed; inset: 0 0 auto 0; z-index: var(--z-header); height: var(--header-h); transition: background-color var(--dur-long) var(--ease-out); color: var(--text); }
 .header-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); }
 .brand { display: inline-flex; align-items: center; gap: var(--space-sm); text-decoration: none; flex: none; }
-.brand-pic { display: flex; }
 .brand-logo { width: auto; height: 60px; filter: drop-shadow(0 1px 0 color-mix(in oklab, var(--ink) 55%, transparent)); transition: transform var(--dur-short) var(--ease-out), filter var(--dur-short) var(--ease-out); }
 .brand:hover .brand-logo { transform: translateY(-1px); filter: drop-shadow(0 2px 14px color-mix(in oklab, var(--text) 26%, transparent)); }
 .brand-text { display: grid; line-height: 1; }
@@ -747,7 +746,7 @@ main, .site-footer { transition: opacity 220ms var(--ease-out); }
 }
 @media (max-width: 40rem) {
   :root { --header-h: 72px; --section: 56px; --text-hero: clamp(2.9rem, 13vw, 4.2rem); }
-  .brand-logo { height: 54px; filter: drop-shadow(0 1px 6px color-mix(in oklab, var(--ink) 60%, transparent)); }
+  .brand-logo { height: 58px; filter: drop-shadow(0 1px 6px color-mix(in oklab, var(--ink) 60%, transparent)); }
   .brand-text b { font-size: 1.35rem; }
   .hero-grid { padding-block: var(--space-lg) var(--space-xl); }
   .hero .lead { margin-top: var(--space-md); }
@@ -852,7 +851,7 @@ main, .site-footer { transition: opacity 220ms var(--ease-out); }
   .lang-switch a { min-width: 36px; height: 32px; padding: 0 var(--space-xs); }
   .header-inner { gap: var(--space-sm); }
   .brand-text b { font-size: 1.2rem; }
-  .brand-logo { height: 54px; filter: drop-shadow(0 1px 6px color-mix(in oklab, var(--ink) 60%, transparent)); }
+  .brand-logo { height: 58px; filter: drop-shadow(0 1px 6px color-mix(in oklab, var(--ink) 60%, transparent)); }
   .founder-card { grid-template-columns: minmax(0, 1fr); padding: var(--space-lg); gap: var(--space-lg); }
   .founder-card-photo { aspect-ratio: 1 / 1; max-width: 220px; }
   .team-card { padding: var(--space-md); grid-template-columns: 76px minmax(0, 1fr); }
