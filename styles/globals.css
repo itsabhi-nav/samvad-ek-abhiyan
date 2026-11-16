@@ -748,8 +748,8 @@ main, .site-footer { transition: opacity 220ms var(--ease-out); }
   :root { --header-h: 80px; --section: 56px; --text-hero: clamp(2.9rem, 13vw, 4.2rem); }
   .brand { gap: 10px; }
   .brand-logo { height: 58px; filter: drop-shadow(0 1px 6px color-mix(in oklab, var(--ink) 60%, transparent)); }
-  .brand-text b, .lang-hi .brand-text b { font-size: 1.5rem; }
-  .brand-text span { font-size: 0.72rem; margin-top: 1px; }
+  .brand-text b, .lang-hi .brand-text b { font-size: 1.55rem; }
+  .brand-text span { font-size: 0.78rem; margin-top: 1px; color: var(--text-2); }
   .hero-grid { padding-block: var(--space-lg) var(--space-xl); }
   .hero .lead { margin-top: var(--space-md); }
   .hero-actions { flex-direction: column; align-items: stretch; margin-top: var(--space-lg); gap: var(--space-sm); }
@@ -852,7 +852,7 @@ main, .site-footer { transition: opacity 220ms var(--ease-out); }
   .cta-points { margin-top: var(--space-md); }
   .lang-switch a { min-width: 36px; height: 32px; padding: 0 var(--space-xs); }
   .header-inner { gap: var(--space-sm); }
-  .brand-text b, .lang-hi .brand-text b { font-size: 1.5rem; }
+  .brand-text b, .lang-hi .brand-text b { font-size: 1.55rem; }
   .brand-logo { height: 58px; filter: drop-shadow(0 1px 6px color-mix(in oklab, var(--ink) 60%, transparent)); }
   .founder-card { grid-template-columns: minmax(0, 1fr); padding: var(--space-lg); gap: var(--space-lg); }
   .founder-card-photo { aspect-ratio: 1 / 1; max-width: 220px; }
